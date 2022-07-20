@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { TaskList } from "./components/TaskList";
+import { DiReact } from "react-icons/di";
+import { FiExternalLink } from "react-icons/fi";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="main-container">
+        <DiReact style={{ fontSize: 150 }} />
+        <div className="logo-container">
+          <h1>React Tasks List</h1>
+        </div>
+        <div className="app-container">
+          <TaskList></TaskList>
+        </div>
+      </div>
+      <div className="footer">
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/ilm1337"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Github <FiExternalLink />
         </a>
-      </header>
+        <a
+          href="https://www.linkedin.com/in/ivanlopezmontero/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn <FiExternalLink />
+        </a>
+      </div>
     </div>
   );
 }
